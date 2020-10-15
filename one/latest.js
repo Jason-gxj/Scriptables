@@ -61,10 +61,12 @@ class Im3xWidget {
     author.textOpacity = 0.8
   
   // 加载背景图片
-    let bg = await this.getImage(one["img_url"])
+    //let bg = await this.getImage(one["img_url"])
   
-    w.backgroundImage = await this.shadowImage(bg)
+    //w.backgroundImage = await this.shadowImage(bg)
   //   记得最后返回组件
+    const img = await new Request(http://a1.qpic.cn/psc?/V11MKVzO0WxjBZ/ruAMsa53pVQWN7FLK88i5je0QXvc5qIlxHDF.t9y0wtmT8OyiXJHMgdEWzgXqy182QoClQnWc1xLvlAU*pTpSBxjdgf947DjrK9mFq4GbU8!/b&ek=1&kp=1&pt=0&bo=ggIoAYICKAERECc!&tl=3&vuin=1185061639&tm=1602748800&sce=60-2-2&rf=viewer_311).loadImage()
+    widget.backgroundImage = img
     return w
   }
 
@@ -124,7 +126,7 @@ class Im3xWidget {
     return widget
   }
   async getData () {
-    const API = "http://m.wufazhuce.com/one";
+    const API = "";http://m.wufazhuce.com/one
     const req1 = new Request(API)
     // await req1.load()
     const body1 = await req1.loadString()
